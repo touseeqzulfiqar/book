@@ -1,0 +1,9 @@
+<!-- app/views/records/index.html.erb -->
+<h1>Records Index</h1>
+<ul>
+  <% @records.each do |record| %>
+    <li><%= link_to record.title, record %></li>
+  <% end %>
+</ul>
+    <%= link_to "New Book record", new_record_path%>
+<% @records.each {  |a|%> <%= a.title%><%%> } %> 

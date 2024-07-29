@@ -1,0 +1,7 @@
+<!-- app/views/records/index.html.erb -->
+<h1>Records Index</h1>
+<ul>
+  <% @records.each do |record| %>
+    <li><%= link_to "record", article_path %></li>
+  <% end %>
+</ul>
