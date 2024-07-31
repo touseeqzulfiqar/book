@@ -1,7 +1,5 @@
 class RecordsController < ApplicationController
-  # Devise
   before_action :authenticate_user!
-  # cancancan
   load_and_authorize_resource
   def index
     @records = Record.all

@@ -1,11 +1,8 @@
 class ApplicationController < ActionController::Base
 
-rescue_from CanCan::AccessDenied do |exception|
+rescue_form CanCan::AccessDenied do |exception|
   flash[:alert] = exception.message
-  # redirect_to request.referer || 
-  sign_out(current_user)
-  # redirect_to new_user_session_path
-end
+  redirect_to request.refere || root_path
   before_action :allow_perameters, if: :devise_controller?
   protected
   def allow_perameters

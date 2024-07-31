@@ -4,7 +4,7 @@ rescue_from CanCan::AccessDenied do |exception|
   flash[:alert] = exception.message
   # redirect_to request.referer || 
   sign_out(current_user)
-  # redirect_to new_user_session_path
+  redirect_to new_user_session_path
 end
   before_action :allow_perameters, if: :devise_controller?
   protected

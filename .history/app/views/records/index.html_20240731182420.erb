@@ -4,7 +4,7 @@
     <li><%= link_to record.title, record %></li>
   <% end %>
 </ul>
-<%if can?(:create, Record)%>
+<%if can? :create, Record%>
     <%= link_to "New Book record", new_record_path%>
 <% end %>
     <%= button_to "Log out", destroy_user_session_path, method: :delete%>

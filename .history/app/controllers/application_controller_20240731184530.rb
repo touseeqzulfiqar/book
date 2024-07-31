@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 
 rescue_from CanCan::AccessDenied do |exception|
-  flash[:alert] = exception.message
+  # flash[:alert] = exception.message
   # redirect_to request.referer || 
   sign_out(current_user)
   # redirect_to new_user_session_path
