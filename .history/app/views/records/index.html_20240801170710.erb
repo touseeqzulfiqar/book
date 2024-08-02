@@ -1,0 +1,23 @@
+<h1>Records Index</h1>
+<h3><%= @records.count%>/<%= Record.count %></h3>
+<ul>
+  <% @records.each do |record| %>
+    <li><%= link_to record.title, record %></li>
+  <% end %>
+</ul>
+<%if can?(:create, Record)%>
+    <%= link_to "New Book record", new_record_path%>
+<% end %>
+<%= raw pagy_nav(@pagy) if @pagy.pages > 1%>
+<%= button_to "Log out", destroy_user_session_path, method: :delete%>
+<%= render 'shared/pagy_nav', pagy: @pagy %>
+
+<% @records.each do |record| %>
+  <div>
+    <h3><%= record.title %></h3>
+    <p><%= record.author %></p>
+    <p><%= record.description %></p>
+  </div>
+<% end %>
+
+<%= render 'shared/pagy_nav', pagy: @pagy %>

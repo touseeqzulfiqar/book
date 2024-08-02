@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRkfkzsq4XoRiHtHHcSkc4xEjQcb9JmMGu5oV6dI5" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha384-kaM5F4pGzax15i5x8w+GZnvj3icS+S46PFTJ9FQn2U9+5bf6G5eB4/ocfsE2C9Ww" crossorigin="anonymous"></script>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>
